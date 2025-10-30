@@ -1,5 +1,6 @@
 package app;
 import entity.*;
+
 import java.time.LocalDateTime;
 import java.time.format.DateTimeFormatter;
 import java.util.Scanner;
@@ -134,8 +135,98 @@ public class Main {
         }while("DA".equalsIgnoreCase(choiceUserContinue));
 
 
+        searchUsers(osobe,sc);
+        searchHalls(dvorane,sc);
     }
 
+    private static void searchUsers(Person[] people,Scanner sc) {
+
+        System.out.println("Pretraži korisnika po imenu/prezimenu: ");
+        System.out.println("1. ime");
+        System.out.println("2. prezime");
+        System.out.print("Odabir >> ");
+        Integer choice = sc.nextInt();
+        sc.nextLine();
+        String input;
+        switch (choice) {
+            case 1 -> System.out.print("Unesi ime:");
+            case 2 -> System.out.print("Unesi prezime:");
+        }
+        ;
+        input = sc.nextLine();
+
+        if (choice == 1) {
+            boolean nadjen = false;
+            for (Integer i = 0; i < people.length; i++) {
+
+                if (people[i] == null) {
+                    break;
+                }
+                if (people[i] instanceof User user) {
+                    if (user.getFirstName().equalsIgnoreCase(input)) {
+                        System.out.println("Pronađen korisnik" + user.getFirstName() + " " + user.getLastName() + ".");
+                        System.out.println("---------------");
+                        user.allMyBookings();
+                        nadjen=true;
+                        break;
+                    }
+
+
+                } else if (people[i] instanceof Coach coach) {
+                    if (coach.getFirstName().equalsIgnoreCase(input)) {
+                        System.out.println("Pronađen trener " + coach.getFirstName() + " " + coach.getLastName() + ".");
+                        System.out.println("---------------");
+                        coach.printMyBookings();
+                        nadjen=true;
+                        break;
+                    }
+                }
+
+            }
+            if (nadjen == false) {
+                System.out.println("Nije pronađen korisnik!");
+            }
+
+
+        }
+        else if(choice==2)
+        {
+            boolean nadjen = false;
+            for (Integer i = 0; i < people.length; i++) {
+
+                if (people[i] == null) {
+                    break;
+                }
+                if (people[i] instanceof User user) {
+                    if (user.getLastName().equalsIgnoreCase(input)) {
+                        System.out.println("Pronađen korisnik" + user.getFirstName() + " " + user.getLastName() + ".");
+                        System.out.println("");
+                        user.allMyBookings();
+                        nadjen=true;
+                        break;
+                    }
+
+
+                } else if (people[i] instanceof Coach coach) {
+                    if (coach.getLastName().equalsIgnoreCase(input)) {
+                        System.out.println("Pronađen korisnik" + coach.getFirstName() + " " + coach.getLastName() + ".");
+                        System.out.println("");
+                        coach.getMyBookings();
+                        nadjen=true;
+                        break;
+                    }
+                }
+
+            }
+            if (nadjen == false) {
+                System.out.println("Nije pronađen korisnik!");
+            }
+        }
+        else
+        {
+            System.out.println("Krivo ste unjeli odabir!");
+        }
+    }
 
     public static Person generateCoach(Scanner sc) {
 
@@ -246,5 +337,44 @@ public class Main {
 
     }
 
+    private static void searchHalls(Hall[] halls,Scanner sc)
+    {
+        System.out.println("Pronađi dvoranu najvećeg/najmanjeg kapaciteta nekog proizvoda: ");
+        System.out.println("1. najveći");
+        System.out.println("2. najmanji");
+        System.out.print("Odabir >> ");
+        Integer choice = sc.nextInt();
+        sc.nextLine();
+        Integer max = -1;
+        Integer min = 100;
+        int index=0;
+        switch (choice)
+        {
+            case 1 -> {
+                for(int i=0;i<halls.length;i++)
+                {
+                    if(max<halls[i].getCapacity())
+                    {
+                        max = halls[i].getCapacity();
+                        index = i;
+                    }
+                }
+                System.out.println("Najveći kapacitet ima dvorana: " + halls[index].getName() + ",a u nju stane " + halls[index].getCapacity() + " ljudi." );
+            }
+            case 2 -> {
+                for(int i=0;i<halls.length;i++)
+                {
+                    if(min>halls[i].getCapacity())
+                    {
+                        min =  halls[i].getCapacity();
+                        index = i;
+                    }
+                }
+                System.out.println("Najmanji kapacitet ima dvorana: " + halls[index].getName() + ",a u nju stane " + halls[index].getCapacity() + " ljudi." );
+            }
+            default -> System.out.println("Krivi unos odabira!");
+        };
+
+    }
 }
 

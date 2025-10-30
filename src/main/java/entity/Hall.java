@@ -6,10 +6,10 @@ import java.time.LocalDateTime;
 
 non-sealed public class Hall implements Reservable, Schedulable {
     private static final Integer BrojBookinga = 5;
-    String name,doorNumber;
-    Integer capacity;
-    String supportedSport;
-    Booking[] bookings = new Booking[BrojBookinga];
+    private String name,doorNumber;
+    private Integer capacity;
+    private String supportedSport;
+    private Booking[] bookings = new Booking[BrojBookinga];
     public Hall(String name, String doorNumber, Integer capacity, String supportedSport) {
         this.name = name;
         this.doorNumber = doorNumber;
@@ -21,7 +21,7 @@ non-sealed public class Hall implements Reservable, Schedulable {
     @Override
     public String toString() {
         return  name + ",broj na vratima:" + doorNumber + ", kapacitet:" + capacity +
-                ", sport:'" + supportedSport;
+                ", sport:" + supportedSport;
     }
 
     @Override
@@ -82,7 +82,7 @@ non-sealed public class Hall implements Reservable, Schedulable {
         return name;
     }
 
-    public void setName(String name) {
-        this.name = name;
+    public Integer getCapacity() {
+        return capacity;
     }
 }

@@ -54,7 +54,7 @@ public class User extends Person {
             if(myBookings[i]==null)
             {
                 myBookings[i] = booking;
-                System.out.println("Korisnik " + getFirstName() +" uspješno je rezvirao termin u dvorani !" + booking.hall().name + "! -> " + booking.dateTime());
+                System.out.println("Korisnik " + getFirstName() +" uspješno je rezvirao termin u dvorani !" + booking.hall().getName() + "! -> " + booking.dateTime());
                 return;
             }
         }

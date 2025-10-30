@@ -1,7 +1,7 @@
 package entity;
 
 public abstract class Person {
-    private String OIB, firstName,lastName,email,phoneNumber;
+    protected String OIB, firstName,lastName,email,phoneNumber;
 
     protected Person(PersonBuilder builder)
     {
