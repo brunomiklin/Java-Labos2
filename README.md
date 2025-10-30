@@ -1,4 +1,4 @@
-Read.ME
+
 
 Opis:
 Ova aplikacija omogućuje kreiranje korisnika (User) i trenera (Coach), upravljanje dvoranama (Hall) te rezervaciju termina (Booking) za treninge. Program omogućuje:
