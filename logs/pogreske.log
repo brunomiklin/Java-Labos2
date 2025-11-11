@@ -1,0 +1,85 @@
+2025-11-06 21:39:40,548 TRACE [main] app.Main [Main.java:34] Ulaz u metodu main.
+2025-11-06 21:39:40,572 TRACE [main] app.Main [Main.java:40] Iteracija kroz for-petlju (NUMBER_OF_USERS)
+2025-11-06 21:39:46,498 ERROR [main] app.Main [Main.java:65] For input string: "INPUT:"
+2025-11-06 21:39:46,498 TRACE [main] app.Main [Main.java:579] Ulazak u metode generateUser
+2025-11-06 21:39:46,498 INFO [main] app.Main [Main.java:581] Generiramo korisnike.
+2025-11-06 21:39:46,502 TRACE [main] app.Main [Main.java:657] Izlazak iz metode generateUser
+2025-11-06 21:39:46,502 INFO [main] app.Main [Main.java:56] Korisnik je uspješno kreiran!
+2025-11-06 21:39:46,502 TRACE [main] app.Main [Main.java:40] Iteracija kroz for-petlju (NUMBER_OF_USERS)
+2025-11-06 21:39:46,503 TRACE [main] app.Main [Main.java:491] Ulazak u metodu generateCoach
+2025-11-06 21:39:46,503 INFO [main] app.Main [Main.java:492] Generiramo trenere.
+2025-11-06 21:39:46,504 TRACE [main] app.Main [Main.java:561] Izlazak iz metode generateCoach
+2025-11-06 21:39:46,505 INFO [main] app.Main [Main.java:56] Korisnik je uspješno kreiran!
+2025-11-06 21:39:46,505 TRACE [main] app.Main [Main.java:40] Iteracija kroz for-petlju (NUMBER_OF_USERS)
+2025-11-06 21:39:46,505 TRACE [main] app.Main [Main.java:579] Ulazak u metode generateUser
+2025-11-06 21:39:46,505 INFO [main] app.Main [Main.java:581] Generiramo korisnike.
+2025-11-06 21:39:46,506 TRACE [main] app.Main [Main.java:657] Izlazak iz metode generateUser
+2025-11-06 21:39:46,506 INFO [main] app.Main [Main.java:56] Korisnik je uspješno kreiran!
+2025-11-06 21:39:46,506 TRACE [main] app.Main [Main.java:40] Iteracija kroz for-petlju (NUMBER_OF_USERS)
+2025-11-06 21:39:46,506 TRACE [main] app.Main [Main.java:491] Ulazak u metodu generateCoach
+2025-11-06 21:39:46,507 INFO [main] app.Main [Main.java:492] Generiramo trenere.
+2025-11-06 21:39:46,509 TRACE [main] app.Main [Main.java:561] Izlazak iz metode generateCoach
+2025-11-06 21:39:46,509 INFO [main] app.Main [Main.java:56] Korisnik je uspješno kreiran!
+2025-11-06 21:39:46,509 TRACE [main] app.Main [Main.java:40] Iteracija kroz for-petlju (NUMBER_OF_USERS)
+2025-11-06 21:39:46,509 TRACE [main] app.Main [Main.java:579] Ulazak u metode generateUser
+2025-11-06 21:39:46,509 INFO [main] app.Main [Main.java:581] Generiramo korisnike.
+2025-11-06 21:39:46,510 TRACE [main] app.Main [Main.java:657] Izlazak iz metode generateUser
+2025-11-06 21:39:46,510 INFO [main] app.Main [Main.java:56] Korisnik je uspješno kreiran!
+2025-11-06 21:39:46,510 TRACE [main] app.Main [Main.java:40] Iteracija kroz for-petlju (NUMBER_OF_USERS)
+2025-11-06 21:39:46,511 TRACE [main] app.Main [Main.java:579] Ulazak u metode generateUser
+2025-11-06 21:39:46,511 INFO [main] app.Main [Main.java:581] Generiramo korisnike.
+2025-11-06 21:39:46,512 TRACE [main] app.Main [Main.java:657] Izlazak iz metode generateUser
+2025-11-06 21:39:46,512 INFO [main] app.Main [Main.java:56] Korisnik je uspješno kreiran!
+2025-11-06 21:39:46,512 TRACE [main] app.Main [Main.java:40] Iteracija kroz for-petlju (NUMBER_OF_USERS)
+2025-11-06 21:39:46,512 TRACE [main] app.Main [Main.java:491] Ulazak u metodu generateCoach
+2025-11-06 21:39:46,512 INFO [main] app.Main [Main.java:492] Generiramo trenere.
+2025-11-06 21:39:46,513 TRACE [main] app.Main [Main.java:561] Izlazak iz metode generateCoach
+2025-11-06 21:39:46,513 INFO [main] app.Main [Main.java:56] Korisnik je uspješno kreiran!
+2025-11-06 21:39:46,513 TRACE [main] app.Main [Main.java:40] Iteracija kroz for-petlju (NUMBER_OF_USERS)
+2025-11-06 21:39:46,514 TRACE [main] app.Main [Main.java:579] Ulazak u metode generateUser
+2025-11-06 21:39:46,514 INFO [main] app.Main [Main.java:581] Generiramo korisnike.
+2025-11-06 21:39:46,514 TRACE [main] app.Main [Main.java:657] Izlazak iz metode generateUser
+2025-11-06 21:39:46,514 INFO [main] app.Main [Main.java:56] Korisnik je uspješno kreiran!
+2025-11-06 21:39:46,515 TRACE [main] app.Main [Main.java:40] Iteracija kroz for-petlju (NUMBER_OF_USERS)
+2025-11-06 21:39:46,515 TRACE [main] app.Main [Main.java:579] Ulazak u metode generateUser
+2025-11-06 21:39:46,515 INFO [main] app.Main [Main.java:581] Generiramo korisnike.
+2025-11-06 21:39:46,516 TRACE [main] app.Main [Main.java:657] Izlazak iz metode generateUser
+2025-11-06 21:39:46,516 INFO [main] app.Main [Main.java:56] Korisnik je uspješno kreiran!
+2025-11-06 21:39:46,516 TRACE [main] app.Main [Main.java:40] Iteracija kroz for-petlju (NUMBER_OF_USERS)
+2025-11-06 21:39:46,516 TRACE [main] app.Main [Main.java:579] Ulazak u metode generateUser
+2025-11-06 21:39:46,516 INFO [main] app.Main [Main.java:581] Generiramo korisnike.
+2025-11-06 21:39:46,517 TRACE [main] app.Main [Main.java:657] Izlazak iz metode generateUser
+2025-11-06 21:39:46,517 INFO [main] app.Main [Main.java:56] Korisnik je uspješno kreiran!
+2025-11-06 21:39:46,517 TRACE [main] app.Main [Main.java:74] Iteracija kroz for-petlju (NUMBER_OF_OBJECTS)
+2025-11-06 21:39:46,518 DEBUG [main] app.Main [Main.java:78] Pozivam metodu generateHall za dvoranu broj 1.
+2025-11-06 21:39:46,519 TRACE [main] app.Main [Main.java:675] Ulazak u metodu generateHall
+2025-11-06 21:39:46,519 INFO [main] app.Main [Main.java:677] Generiramo dvorane.
+2025-11-06 21:39:46,521 TRACE [main] app.Main [Main.java:718] Izlazak iz metode generateHall
+2025-11-06 21:39:46,522 TRACE [main] app.Main [Main.java:74] Iteracija kroz for-petlju (NUMBER_OF_OBJECTS)
+2025-11-06 21:39:46,522 DEBUG [main] app.Main [Main.java:78] Pozivam metodu generateHall za dvoranu broj 2.
+2025-11-06 21:39:46,522 TRACE [main] app.Main [Main.java:675] Ulazak u metodu generateHall
+2025-11-06 21:39:46,522 INFO [main] app.Main [Main.java:677] Generiramo dvorane.
+2025-11-06 21:39:46,523 TRACE [main] app.Main [Main.java:718] Izlazak iz metode generateHall
+2025-11-06 21:39:46,523 TRACE [main] app.Main [Main.java:74] Iteracija kroz for-petlju (NUMBER_OF_OBJECTS)
+2025-11-06 21:39:46,523 DEBUG [main] app.Main [Main.java:78] Pozivam metodu generateHall za dvoranu broj 3.
+2025-11-06 21:39:46,523 TRACE [main] app.Main [Main.java:675] Ulazak u metodu generateHall
+2025-11-06 21:39:46,523 INFO [main] app.Main [Main.java:677] Generiramo dvorane.
+2025-11-06 21:39:46,524 TRACE [main] app.Main [Main.java:718] Izlazak iz metode generateHall
+2025-11-06 21:39:46,524 TRACE [main] app.Main [Main.java:74] Iteracija kroz for-petlju (NUMBER_OF_OBJECTS)
+2025-11-06 21:39:46,524 DEBUG [main] app.Main [Main.java:78] Pozivam metodu generateHall za dvoranu broj 4.
+2025-11-06 21:39:46,524 TRACE [main] app.Main [Main.java:675] Ulazak u metodu generateHall
+2025-11-06 21:39:46,524 INFO [main] app.Main [Main.java:677] Generiramo dvorane.
+2025-11-06 21:39:46,524 TRACE [main] app.Main [Main.java:718] Izlazak iz metode generateHall
+2025-11-06 21:39:46,525 TRACE [main] app.Main [Main.java:74] Iteracija kroz for-petlju (NUMBER_OF_OBJECTS)
+2025-11-06 21:39:46,525 DEBUG [main] app.Main [Main.java:78] Pozivam metodu generateHall za dvoranu broj 5.
+2025-11-06 21:39:46,525 TRACE [main] app.Main [Main.java:675] Ulazak u metodu generateHall
+2025-11-06 21:39:46,525 INFO [main] app.Main [Main.java:677] Generiramo dvorane.
+2025-11-06 21:39:46,525 TRACE [main] app.Main [Main.java:718] Izlazak iz metode generateHall
+2025-11-06 21:39:46,527 DEBUG [main] app.Main [Main.java:88] Pozivam metodu createBooking pomocu ovih parametara [Person[] class [Lentity.Person; [Scanner class java.util.Scanner] [Halls[] class [Lentity.Hall;]
+2025-11-06 21:39:46,528 TRACE [main] app.Main [Main.java:114] Ulaz u metodu createBooking.
+2025-11-06 21:39:46,528 INFO [main] app.Main [Main.java:115] Kreiramo booking.
+2025-11-06 21:39:46,528 INFO [main] app.Main [Main.java:118] Odabir trenera.
+2025-11-06 21:39:47,834 INFO [main] app.Main [Main.java:153] Odabir dvorana.
+2025-11-06 21:39:49,029 INFO [main] app.Main [Main.java:180] Unos datuma i vremena.
+2025-11-06 21:39:56,421 ERROR [main] app.Main [Main.java:187] Text '15.3.97 13' could not be parsed at index 3
+2025-11-06 21:39:56,421 INFO [main] app.Main [Main.java:180] Unos datuma i vremena.
