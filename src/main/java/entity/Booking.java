@@ -26,4 +26,6 @@ public record Booking(Coach coach, Hall hall, LocalDateTime dateTime, Integer tr
                 ", datum i vrijeme:" + dateTime +
                 ", Vrijeme trajanja(u minutam):" + trainingTime/60;
     }
+
+
 }

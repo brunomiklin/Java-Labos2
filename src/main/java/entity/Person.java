@@ -1,5 +1,7 @@
 package entity;
 
+import java.util.Objects;
+
 /**
  * Predstavlja generički tip osobe sa osobnim podacima i ponašanjima.
  * Služi kao šablona za klase poput {@link Coach} i {@link User}.
@@ -135,6 +137,27 @@ public abstract class Person {
      */
     public String getLastName() {
         return lastName;
+    }
+
+    /**
+     * Dohvaća email {@link Person}
+     *
+     * @return vraća email u obliku stringa ili null
+     */
+    public String getEmail() {
+        return email;
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (!(o instanceof Person person)) return false;
+        return OIB.equals(person.OIB);
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(OIB);
     }
 
 

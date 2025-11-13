@@ -2,10 +2,10 @@ package entity;
 
 import java.time.LocalDate;
 import java.time.LocalDateTime;
+import java.util.*;
 
 /**
  * Predsatvlja objekt sportke dvorane koja se može rezervirati i zakazati.
- *
  *
  * Klasa {@code Hall} implementira sučelja {@link Reservable} i {@link Schedulable}.
  * Svaka dvorana ima ogranićeni broj mogućih bookinga, kapacitet i naziv, broj vrata
@@ -16,9 +16,13 @@ non-sealed public class Hall implements Reservable, Schedulable {
     private static final Integer BrojBookinga = 5;
     private String name,doorNumber;
     private Integer capacity;
-    private String supportedSport;
-    private Booking[] bookings = new Booking[BrojBookinga];
+    private SportType supportedSport;
+    private List<Booking> bookings = new ArrayList<>();
 
+    /**
+     * Defaultni konstruktor klase {@link Hall}
+     */
+    public Hall(){}
 
     /**
      * Inicjalizira novi objekt klase {@link Hall} sa određenim parametrima
@@ -28,7 +32,7 @@ non-sealed public class Hall implements Reservable, Schedulable {
      * @param capacity kapacaitet dvorane
      * @param supportedSport tip sporta za koji je namijenjena dvorana
      */
-    public Hall(String name, String doorNumber, Integer capacity, String supportedSport) {
+    public Hall(String name, String doorNumber, Integer capacity, SportType supportedSport) {
         this.name = name;
         this.doorNumber = doorNumber;
         this.capacity = capacity;
@@ -65,21 +69,13 @@ non-sealed public class Hall implements Reservable, Schedulable {
     @Override
    public boolean isAvailable(LocalDateTime time,Integer duration)
    {
-       for(Integer i=0;i<bookings.length;i++)
-       {
-           if (bookings[i] == null) {
-               continue;
-           }
-           LocalDateTime start = bookings[i].dateTime();
-           LocalDateTime end = bookings[i].dateTime().plusMinutes(bookings[i].trainingTime()*60);
+        return bookings.stream().noneMatch(b-> {
 
+            LocalDateTime start = b.dateTime();
+            LocalDateTime end = start.plusMinutes(b.trainingTime());
+            return !(time.isBefore(start) || time.isAfter(end));
 
-           if(!(time.isBefore(start) || time.isAfter(end)))
-           {
-               return false;
-           }
-       }
-       return true;
+        });
    }
 
 
@@ -94,15 +90,15 @@ non-sealed public class Hall implements Reservable, Schedulable {
    @Override
    public void getBookingsForDate(LocalDate date)
    {
-       Integer brojac =1;
-        for(int i=0;i<bookings.length;i++)
-        {
-            if(bookings[i].dateTime().toLocalDate()==date)
-            {
+       SequencedSet<Booking> result = new TreeSet<>(
+               Comparator.comparing(Booking::dateTime)
+       );
+       result.addAll(
+        bookings.stream().filter(b->b.dateTime().toLocalDate().equals(date)).toList()
+       );
 
-                System.out.println(((brojac++) + "Trener: " + bookings[i].coach().getFirstName() + " Dvorana:" + bookings[i].hall()));
-            }
-        }
+       System.out.print("Pronađena je rezervacije koja odgovara vašem datumu: ");
+       System.out.println(result.getFirst().toString()); //getFirst() samo zbog sequenced
    }
 
     /**
@@ -117,20 +113,18 @@ non-sealed public class Hall implements Reservable, Schedulable {
     @Override
     public void addBooking(Booking newBooking)
    {
-       if(!isAvailable(newBooking.dateTime(),newBooking.trainingTime()))
-       {
+       if (!isAvailable(newBooking.dateTime(), newBooking.trainingTime())) {
            System.out.println("Termin nije dostupan za dodavanje!");
+           return;
        }
-       for(Integer i = 0;i<bookings.length;i++)
+       if(bookings.size()>BrojBookinga)
        {
-           if(bookings[i]==null)
-           {
-               bookings[i] = newBooking;
-               System.out.println("Termin dodan za trenera " + newBooking.coach().getFirstName());
-               return;
-           }
+           System.out.println("Nema više prostora za dodavanje bookinga!");
+       return;
        }
-       System.out.println("Nema više prostora za dodavanje bookinga!");
+        bookings.add(newBooking);
+       System.out.println("Termin dodan za trenera: " + newBooking.coach().getFirstName() + " " + newBooking.coach().getLastName());
+
    }
 
     /**
@@ -149,5 +143,14 @@ non-sealed public class Hall implements Reservable, Schedulable {
      */
     public Integer getCapacity() {
         return capacity;
+    }
+
+    /**
+     * Dohvaća tip sporta kojeg dvorana podržava.
+     *
+     * @return vraća sport kao {@link SportType}.
+     */
+    public SportType getSport() {
+        return supportedSport;
     }
 }
